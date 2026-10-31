@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffe5ed">
+  <meta name="description" content="Alfressi: deliciosas fresas con crema en San Germán. Elige tu tamaño, toppings y salsas favoritas.">
+  <title>Alfressi | Fresas con crema 🍓</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <a class="logo" href="#inicio">Alfressi <span>🍓</span></a>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#arma">Toppings</a>
+      <a href="#nosotras">Nosotras</a>
+      <a href="#pedidos">Cómo pedir</a>
+      <a href="#comentarios">Comentarios</a>
+      <a href="#contacto">Contacto y redes</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. INICIO -->
+    <section id="inicio" class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">UN MOMENTO DULCE, HECHO PARA TI 🍓</span>
+        <h1>Fresas con crema<br><em>que enamoran.</em></h1>
+        <p>
+          Fresitas, crema deliciosa y tus toppings favoritos.
+          Crea tu combinación y disfruta un antojito lleno de dulzura.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#productos">Ver productos 🍓</a>
+          <a class="btn btn-light" href="#arma">Armar mi vaso 💗</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/59162131413?text=Hola%20Alfressi%20%F0%9F%8D%93%2C%20quiero%20consultar%20por%20sus%20fresas%20con%20crema." target="_blank" rel="noopener noreferrer">WhatsApp 💬</a>
+        </div>
+      </div>
+
+      <div class="hero-logo">
+        <img src="img/imagenes/logo-alfressi.png"
+             alt="Logo oficial de Alfressi, fresas con crema">
+      </div>
+    </section>
+
+    <!-- 2. PRODUCTOS -->
+    <section id="productos" class="section">
+      <div class="section-heading">
+        <span class="eyebrow">PREPARADOS CON AMOR</span>
+        <h2>Nuestros vasitos 🍓</h2>
+        <p>Elige tu tamaño favorito y agrégalo al carrito.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="img/imagenes/fresas-pequenas-18.jpg" alt="Fresas pequeñas">
+          <div class="product-info">
+            <span class="product-tag">UN ANTOJITO DULCE</span>
+            <h3>Vaso pequeño</h3>
+            <p>Una combinación deliciosa para disfrutar en cualquier momento.</p>
+            <div class="product-bottom">
+              <strong>18 Bs</strong>
+              <button class="btn btn-primary add-product"
+                      data-size="Pequeño" data-price="18" type="button">
+                Agregar +
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card featured">
+          <span class="popular">¡Favorito! 💗</span>
+          <img src="img/imagenes/fresas-mediana-25.jpg" alt="Fresas medianas">
+          <div class="product-info">
+            <span class="product-tag">EL EQUILIBRIO PERFECTO</span>
+            <h3>Vaso mediano</h3>
+            <p>Fresas, crema y una mezcla irresistible de sabores.</p>
+            <div class="product-bottom">
+              <strong>25 Bs</strong>
+              <button class="btn btn-primary add-product"
+                      data-size="Mediano" data-price="25" type="button">
+                Agregar +
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="img/imagenes/fresas-grandes-35.jpg" alt="Fresas grandes">
+          <div class="product-info">
+            <span class="product-tag">MÁS DULZURA PARA TI</span>
+            <h3>Vaso grande</h3>
+            <p>Un vaso generoso para disfrutar cada cucharada.</p>
+            <div class="product-bottom">
+              <strong>35 Bs</strong>
+              <button class="btn btn-primary add-product"
+                      data-size="Grande" data-price="35" type="button">
+                Agregar +
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="center small-note">
+        💕 Todos los tamaños incluyen hasta 3 toppings gratis.
+      </p>
+    </section>
+
+    <!-- 3. TOPPINGS Y PERSONALIZACIÓN -->
+    <section id="arma" class="section custom-section">
+      <div class="section-heading">
+        <span class="eyebrow">TU COMBINACIÓN, TU ESTILO</span>
+        <h2>¡Arma tu vaso! 🍫</h2>
+        <p>Elige tu tamaño, hasta tres toppings gratis y las salsas que prefieras.</p>
+      </div>
+
+      <div class="builder">
+        <form id="builder-form">
+          <label class="field-label" for="size">1. Elige el tamaño</label>
+          <select id="size" name="size">
+            <option value="Pequeño" data-price="18">Pequeño — 18 Bs</option>
+            <option value="Mediano" data-price="25" selected>Mediano — 25 Bs</option>
+            <option value="Grande" data-price="35">Grande — 35 Bs</option>
+          </select>
+
+          <fieldset>
+            <legend>2. Elige tus toppings <span>(máximo 3 gratis)</span></legend>
+            <div class="choice-grid">
+              <label><input type="checkbox" name="topping" value="Oreo"> Oreo</label>
+              <label><input type="checkbox" name="topping" value="Chispas de chocolate"> Chispas de chocolate</label>
+              <label><input type="checkbox" name="topping" value="Chubis de colores"> Chubis de colores</label>
+              <label><input type="checkbox" name="topping" value="Chispas de colores"> Chispas de colores</label>
+              <label><input type="checkbox" name="topping" value="Malvaviscos"> Malvaviscos</label>
+              <label><input type="checkbox" name="topping" value="Leche en polvo"> Leche en polvo</label>
+            </div>
+            <p id="topping-count" class="small-note" aria-live="polite">0 de 3 toppings seleccionados</p>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Elige tus salsas</legend>
+            <div class="choice-grid">
+              <label><input type="checkbox" name="sauce" value="Nutella"> Nutella</label>
+              <label><input type="checkbox" name="sauce" value="Leche condensada"> Leche condensada</label>
+            </div>
+          </fieldset>
+
+          <p id="builder-message" class="small-note" aria-live="polite"></p>
+
+          <div class="builder-bottom">
+            <div>Precio de tu vaso<strong id="builder-price">25 Bs</strong></div>
+            <button class="btn btn-primary" type="submit">Agregar mi vaso 🍓</button>
+          </div>
+        </form>
+
+        <div class="builder-photo">
+          <img src="img/imagenes/fresas-mediana-25.jpg"
+               alt="Fresas con crema preparadas por Alfressi"
+               loading="lazy">
+          <div class="photo-caption">Hecho con dulzura para ti 💗</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. NOSOTRAS -->
+    <section id="nosotras" class="section about-section">
+      <div class="about-mark" aria-hidden="true">A<span>♥</span></div>
+      <div class="about-copy">
+        <span class="eyebrow">DE NUESTRO CORAZÓN AL TUYO</span>
+        <h2>Conoce nuestra historia 💕</h2>
+        <p>
+          ¡Hola! Somos Vani y Mayra, las creadoras de Alfressi.
+          Este emprendimiento nació de nuestras ganas de compartir algo
+          dulce, especial y preparado con mucho cariño. Queremos que cada
+          vasito sea una pequeña alegría, combinando fresas con crema y
+          toppings que hacen cada experiencia única.
+        </p>
+        <p>
+          En Alfressi cuidamos cada detalle y nos encanta que puedas
+          elegir tus combinaciones favoritas. Gracias por apoyar nuestro
+          emprendimiento, confiar en nosotras y formar parte de esta dulce
+          aventura. ¡Preparamos cada pedido pensando en ti! 🍓
+        </p>
+        <p class="signature">Con cariño, Vani y Mayra — Alfressi 🍓</p>
+      </div>
+    </section>
+
+    <!-- 5. CÓMO PEDIR -->
+    <section id="pedidos" class="section">
+      <div class="section-heading">
+        <span class="eyebrow">FÁCIL, RÁPIDO Y DELICIOSO</span>
+        <h2>¿Cómo hacer tu pedido? 💌</h2>
+        <p>En pocos pasos puedes disfrutar tus fresas con crema.</p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step">
+          <span>01</span>
+          <h3>Elige tu vaso</h3>
+          <p>Pequeño, mediano o grande: tú decides.</p>
+        </article>
+        <article class="step">
+          <span>02</span>
+          <h3>Personalízalo</h3>
+          <p>Selecciona hasta tres toppings gratis y tus salsas.</p>
+        </article>
+        <article class="step">
+          <span>03</span>
+          <h3>Revisa tu carrito</h3>
+          <p>Comprueba los productos y el total de tu pedido.</p>
+        </article>
+        <article class="step">
+          <span>04</span>
+          <h3>Envía por WhatsApp</h3>
+          <p>Nos llegará tu pedido para confirmar disponibilidad y entrega.</p>
+        </article>
+      </div>
+      <div class="center">
+        <a class="btn btn-primary" href="#productos">¡Quiero pedir! 🍓</a>
+      </div>
+    </section>
+
+    <!-- 6. COMENTARIOS -->
+    <section id="comentarios" class="section reviews-section">
+      <div class="section-heading">
+        <span class="eyebrow">TU OPINIÓN NOS IMPORTA</span>
+        <h2>Comentarios dulces 💗</h2>
+        <p>Cuéntanos cómo fue tu experiencia con Alfressi.</p>
+      </div>
+
+      <form id="review-form" class="review-form">
+        <label for="review-name">Tu nombre</label>
+        <input id="review-name" name="name" maxlength="45" required
+               placeholder="Escribe tu nombre">
+
+        <label for="review-rating">¿Cuántas estrellas nos das?</label>
+        <select id="review-rating" name="rating" required>
+          <option value="5">★★★★★ — ¡Me encantó!</option>
+          <option value="4">★★★★ — Muy rico</option>
+          <option value="3">★★★ — Bueno</option>
+          <option value="2">★★ — Puede mejorar</option>
+          <option value="1">★ — Una estrella</option>
+        </select>
+
+        <label for="review-text">Tu comentario</label>
+        <textarea id="review-text" name="comment" rows="3"
+                  maxlength="300" required
+                  placeholder="¡Cuéntanos qué te pareció!"></textarea>
+
+        <button class="btn btn-primary" type="submit">Publicar comentario 💕</button>
+        <p class="small-note">Las opiniones de esta versión se guardan solo en este navegador.</p>
+      </form>
+
+      <div id="reviews-list" class="reviews-list" aria-live="polite"></div>
+    </section>
+
+    <!-- 7. CONTACTO Y REDES -->
+    <section id="contacto" class="section contact-section">
+      <div class="section-heading">
+        <span class="eyebrow">¡VEN A VISITARNOS!</span>
+        <h2>Contacto y redes 💗</h2>
+        <p>Estamos en San Germán. ¡Síguenos y comparte tus momentos dulces con nosotros!</p>
+        <p class="opening-hours"><strong>🕒 Horarios:</strong> lunes a sábado, de 9:00 a. m. a 10:00 p. m.; domingo, de 12:00 p. m. a 10:00 p. m.</p>
+      </div>
+
+      <div class="ubicacion">
+  <h2>📍 Encuéntranos</h2>
+  <p>San Germán, kilómetro 27, frente a la plaza central.</p>
+
+  <iframe
+    src="https://maps.google.com/maps?q=Plaza%20central%20San%20German%2C%20Yapacani%2C%20Santa%20Cruz%2C%20Bolivia&output=embed"
+    width="100%"
+    height="350"
+    style="border:0; border-radius:18px;"
+    allowfullscreen
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Ubicación de Alfressi en San Germán">
+  </iframe>
+
+  <a
+    href="https://www.google.com/maps/search/?api=1&query=Plaza+central+San+German+Yapacani+Santa+Cruz+Bolivia"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="boton-mapa">
+    📍 Abrir en Google Maps
+  </a>
+</div>
+
+      <div class="social-area">
+        <h3>Encuéntranos en redes 💕</h3>
+        <p>¡Síguenos para conocer nuestros productos y novedades!</p>
+        <div class="social-links">
+          <a href="https://instagram.com/alfresi_sangerman?dlrf=MTNwdmtzaHZlOTV1aQ%3D%3D"
+             target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+          <a href="https://www.tiktok.com/@alfressi_sangerman"
+             target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+          <a href="https://www.facebook.com/share/1Do5iabhSW/"
+             target="_blank" rel="noopener noreferrer">🔵 Facebook</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#inicio">Alfressi 🍓</a>
+    <p>Un poquito de dulzura en cada vasito. 💗</p>
+    <small>© <span id="year"></span> Alfressi. Hecho con cariño.</small>
+  </footer>
+
+  <!-- CARRITO FLOTANTE -->
+  <button id="cart-toggle" class="cart-float"
+          type="button" aria-label="Abrir carrito"
+          aria-expanded="false" aria-controls="cart-panel">
+    🛒 <span id="cart-count">0</span>
+  </button>
+
+  <aside id="cart-panel" class="cart-panel" hidden aria-label="Tu carrito">
+    <div class="cart-heading">
+      <h2>Tu carrito 🍓</h2>
+      <button id="cart-close" class="icon-button"
+              type="button" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+      <span>Total</span><strong id="cart-total">0 Bs</strong>
+    </div>
+    <fieldset class="payment-options">
+      <legend>Forma de pago</legend>
+      <label><input type="radio" name="payment-method" value="Efectivo" checked> Efectivo</label>
+      <label><input type="radio" name="payment-method" value="QR"> Pagar por QR</label>
+      <label><input type="radio" name="payment-method" value="Transferencia"> Transferencia</label>
+    </fieldset>
+    <div id="qr-payment" class="qr-payment" hidden>
+      <p>Escanea el QR para pagar</p>
+      <img src="img/imagenes/qr-pago-alfressi.jpg" alt="Código QR de pago de Alfressi">
+      <p>Después de pagar, envía tu comprobante por WhatsApp para confirmar el pedido.</p>
+    </div>
+    <button id="checkout" class="btn btn-whatsapp" type="button">
+      Enviar pedido por WhatsApp
+    </button>
+    <button id="empty-cart" class="clear-cart" type="button">
+      Vaciar carrito
+    </button>
+  </aside>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
